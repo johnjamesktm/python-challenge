@@ -1,17 +1,18 @@
 import csv
 import os
 
-input_file = os.path.join("Resources", "election_data.csv")
-
 # Some constants we may reuse through-out the program.
 LINE_DIVIDER = "-------------------------"
 
-# Open the CSV file
+# Path to the input file.
+input_file = os.path.join("Resources", "election_data.csv")
+
+# Open the CSV file.
 with open(input_file) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=",")
 
-    # Given CSV file has header.
-    # Skipping header.
+    # Given CSV file has a header row.
+    # Skipping the header row.
     #
     # Headers are:
     # ['Ballot ID', 'County', 'Candidate']
